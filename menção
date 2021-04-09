@@ -1,0 +1,19 @@
+client.on("message", message => {
+if (message.author.bot) return;
+if (message.channel.type == 'dm')
+return
+if(message.content == '<@804479792585375744>' || message.content == '<@!804479792585375744>') {
+const embed = new Discord.MessageEmbed()
+.setColor(`WHITE`)
+.setDescription(`Olá ${message.author} meu nome é Melix, Um bot para divertir e auxiliar seu servidor, Melhorando ele com meus comandos!
+
+Meu prefixo:
+\`${config.prefix}\`
+
+Servidor de suporte:
+https://discord.gg/EXSgnwEyUP
+`)
+
+return message.channel.send(embed)
+}
+});
